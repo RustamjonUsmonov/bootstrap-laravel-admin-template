@@ -11,9 +11,10 @@
         @include('components.sidebar')
     </div>
     <div class="app-main__outer">
-         <div class="app-main__inner">
-             @yield('content')
-         </div>
+        <div class="app-main__inner">
+            @include('components.message')
+            @yield('content')
+        </div>
     </div>
 
     {{--<script src="http://maps.google.com/maps/api/js?sensor=true"></script>--}}

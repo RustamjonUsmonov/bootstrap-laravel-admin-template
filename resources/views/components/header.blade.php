@@ -33,7 +33,7 @@
     </div>
     <div class="app-header__content">
         <div class="app-header-left">
-            <div class="search-wrapper">
+            {{--<div class="search-wrapper">
                 <div class="input-holder">
                     <input type="text" class="search-input" placeholder="Type to search">
                     <button class="search-icon"><span></span></button>
@@ -59,7 +59,7 @@
                         Settings
                     </a>
                 </li>
-            </ul>
+            </ul>--}}
         </div>
         <div class="app-header-right">
             <div class="header-btn-lg pr-0">
@@ -75,8 +75,6 @@
                                 </a>
                                 <div tabindex="-1" role="menu" aria-hidden="true"
                                      class="dropdown-menu dropdown-menu-right">
-                                    <button type="button" tabindex="0" class="dropdown-item">User Account</button>
-                                    <button type="button" tabindex="0" class="dropdown-item">Settings</button>
                                     <h6 tabindex="-1" class="dropdown-header">Header</h6>
                                     <button type="button" tabindex="0" class="dropdown-item">Actions</button>
                                     <div tabindex="-1" class="dropdown-divider"></div>
@@ -86,10 +84,10 @@
                         </div>
                         <div class="widget-content-left  ml-3 header-user-info">
                             <div class="widget-heading">
-                                Alina Mclourd
+                                {{Auth::user()->name}}
                             </div>
                             <div class="widget-subheading">
-                                VP People Manager
+                                {{Auth::user()->getRoleNames()->first()}}
                             </div>
                         </div>
                         <div class="widget-content-right header-user-info ml-3">
